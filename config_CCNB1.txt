@@ -1,0 +1,13 @@
+# Auto-generated from ccnb1.gpf
+
+center_x = 323.624
+center_y = 223.821
+center_z = 204.992
+
+size_x = 52.488
+size_y = 38.880
+size_z = 38.880
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4

@@ -1,0 +1,13 @@
+# Auto-generated from foxm1.gpf
+
+center_x = 12.645
+center_y = 23.866
+center_z = 0.837
+
+size_x = 25.872
+size_y = 31.360
+size_z = 25.872
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4
