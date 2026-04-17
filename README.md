@@ -26,3 +26,6 @@ install.packages(c("tidyverse", "BiocManager"))
 BiocManager::install(c("limma", "clusterProfiler", "org.Hs.eg.db", "enrichplot", "igraph"))
 Data Availability
 All primary transcriptomic data were sourced from the NCBI Gene Expression Omnibus (GEO). Specific accession IDs and processed results are detailed within the /data folder.
+
+# How to run
+After saving the directory, change the directory to lcms-analysis-app in the directory in terminal and run npm run dev to load the UI window.
