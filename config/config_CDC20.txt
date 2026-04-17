@@ -1,0 +1,13 @@
+# Auto-generated from cdc20.gpf
+
+center_x = -6.888
+center_y = -9.605
+center_z = 21.589
+
+size_x = 37.056
+size_y = 20.844
+size_z = 27.020
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4

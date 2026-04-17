@@ -1,0 +1,13 @@
+# Auto-generated from cep55.gpf
+
+center_x = 21.087
+center_y = 22.399
+center_z = 8.677
+
+size_x = 66.096
+size_y = 31.104
+size_z = 46.656
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4

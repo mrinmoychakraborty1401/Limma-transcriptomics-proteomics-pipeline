@@ -1,0 +1,13 @@
+# Auto-generated from 2ube2t.gpf
+
+center_x = -9.135
+center_y = 8.336
+center_z = -9.360
+
+size_x = 18.750
+size_y = 20.250
+size_z = 21.750
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4

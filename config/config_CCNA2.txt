@@ -1,0 +1,13 @@
+# Auto-generated from ccna2.gpf
+
+center_x = 12.004
+center_y = 15.441
+center_z = 2.950
+
+size_x = 21.762
+size_y = 16.120
+size_z = 24.180
+
+exhaustiveness = 8
+num_modes = 9
+energy_range = 4
