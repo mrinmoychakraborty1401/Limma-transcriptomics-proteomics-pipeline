@@ -1,0 +1,67 @@
+{
+  "name": "lcms-analysis-app",
+  "version": "1.0.0",
+  "description": "An offline desktop tool for LC-MS data analysis.",
+  "main": "main.js",
+  "author": "Your Name",
+  "license": "MIT",
+  "scripts": {
+    "dev": "concurrently \"npm:dev:react\" \"npm:dev:electron\"",
+    "dev:react": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && nodemon --exec electron .",
+    "build": "vite build",
+    "package": "npm run build && electron-builder"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "lucide-react": "^0.309.0",
+    "nodemon": "^3.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "vite": "^5.0.10",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.example.lcmsapp",
+    "productName": "LCMS Analysis Tool",
+    "files": [
+      "dist/**/*",
+      "main.js",
+      "preload.js",
+      "progress.html",
+      "progressPreload.js"
+    ],
+    "extraResources": [
+      {
+        "from": "r_scripts",
+        "to": "r_scripts",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "directories": {
+      "buildResources": "assets",
+      "output": "release"
+    }
+  },
+  "nodemonConfig": {
+    "watch": [
+      "main.js",
+      "preload.js",
+      "progressPreload.js",
+      "r_scripts/*"
+    ],
+    "ignore": [
+      "src/*",
+      "dist/*"
+    ],
+    "ext": "js,json,R"
+  }
+}

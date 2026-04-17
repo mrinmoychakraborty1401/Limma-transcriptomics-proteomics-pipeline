@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Progress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { font-family: sans-serif; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tabs button.active {
+            border-color: #3B82F6;
+            color: #3B82F6;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <div class="p-4">
+        <div id="status-container" class="text-center p-4 bg-white rounded-lg shadow">
+            <h2 class="text-lg font-semibold">Current Status</h2>
+            <p id="current-progress" class="text-gray-600 mt-2">Initializing...</p>
+        </div>
+
+        <div class="mt-4">
+            <div class="tabs flex border-b">
+                <button class="tab-btn py-2 px-4 border-b-2 border-transparent active" data-tab="log">Full Log</button>
+            </div>
+            <div id="log" class="tab-content active bg-gray-800 text-white font-mono text-sm p-4 rounded-b-lg h-64 overflow-y-auto">
+                <!-- Log messages will be appended here -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const progressText = document.getElementById('current-progress');
+        const logContainer = document.getElementById('log');
+
+        window.progressAPI.onUpdate((message) => {
+            progressText.textContent = message;
+        });
+
+        window.progressAPI.onLog((message) => {
+            const logEntry = document.createElement('div');
+            logEntry.textContent = message;
+            logContainer.appendChild(logEntry);
+            logContainer.scrollTop = logContainer.scrollHeight; // Auto-scroll
+        });
+    </script>
+</body>
+</html>
+
